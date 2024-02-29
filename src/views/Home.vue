@@ -29,7 +29,6 @@
 import SingleProject from '../components/SingleProject.vue';
 import FilterNav from '../components/FilterNav.vue';
 
-
 export default {
   name: "Home",
   components: {SingleProject, FilterNav },
@@ -54,7 +53,6 @@ export default {
     }
   },
   mounted() {
-    console.log('Mounted')
     fetch(this.uri)
       .then((res) => res.json())
       .then((data) => (this.projects = data))
